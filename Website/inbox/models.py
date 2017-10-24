@@ -16,9 +16,9 @@ class Inbox(models.Model):
 	#def send_message()
 
 	#def get_all_messages()
-   def __str__(self):
-    """
-    String for representing the Model object
-    """
-    return '%s (%s)' % (self.sender,self.subject,self.content)
+	def __str__(self):
+		"""
+		String for representing the Model object
+		"""
+		return '%s - %s - %s ' % (self.sender,self.subject,self.content)
 
