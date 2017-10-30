@@ -24,5 +24,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^inbox/', include('inbox.urls')),
     url(r'^$', RedirectView.as_view(url='/inbox/', permanent=True)),
+    url(r'^accounts/', include('django.contrib.auth.urls')),
+
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
